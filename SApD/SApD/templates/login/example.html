@@ -2,16 +2,22 @@
 {% load static %}
 {% block title %}Привет юзер{% endblock %}
 
+{% block header %}
+
+{% endblock %}
+    
 {% block main %}
+    {% if useragreement %}
 
-   {% if useragreement %}
-
-   {% for a in useragreement %}
+    {% for a in useragreement %}
       <p id="text" >{{a.useragreement_text}}</p>
       <p id="text"> какойто</p>
       <img src="{% static 'login/logo.png' %}" alt="My image">
       
    {% endfor %} 
-   {% endif %}   
+   {% endif %}  
+{% endblock %}
 
+{% block footer %}
+    
 {% endblock %}

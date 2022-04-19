@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}S.A.p.D.{% endblock %}
+
+{% block header %}
+    <header>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-3 img_logo">
+                <img class="logo" src="{% static 'login/logo.png' %}" alt="My image">
+            </div>
+            <h1 class="col-md-6 site_name">Wellcom to S.A.p.D.</h1>
+        </div>
+    </header>
+{% endblock %}
+{% block main %}
+    <div class="main text">
+        <div class="col-md-2"></div>
+        <div class=" col-md-8">
+            <p class="main_text_p">с подклчючением User_name
+            Рады что ты решил стать пользователем нашего <br> 
+            проекта. Если ты новичок то создай акаунт, если ты <br> уже зарегистрирован то воходи, мы рады что вы используете наш проект =)</p>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+{% endblock %}
