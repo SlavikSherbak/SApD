@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Привет юзер{% endblock %}
+
+{% block contentn %}
+
+   {% if useragreement %}
+
+   {% for a in useragreement %}
+      <p id="text" >{{a.useragreement_text}}</p>
+      <p id="text"> какойто</p>
+      <img src="{% static 'login/logo.png' %}" alt="My image">
+      
+   {% endfor %} 
+   {% endif %}   
+
+{% endblock %}
