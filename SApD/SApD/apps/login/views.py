@@ -5,5 +5,16 @@ from .models import Useragreement
     #useragreement = Useragreement.objects.all()
     #return render(request, 'login/list.html', {'useragreement': useragreement})
 
-def login(request):
+def main(request):
     return render(request, 'login/index.html')
+
+def login_key(request):
+    return render(request, 'login/login_key.html')
+
+def login(request):
+    return render(request, 'login/login.html')
+
+def license(request):
+    useragreement = Useragreement.objects.all()
+    return render(request, 'login/license.html', {'useragreement': useragreement})
+    

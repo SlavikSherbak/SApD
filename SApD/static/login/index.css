@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,300&display=swap');
+
+html,body{
+    height: 100%;
+    overflow-x:  hidden;
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main{
+    flex: 1 1 auto;
+}
+
+.logo{
+    margin: 20px;
+    width: 112px;
+    height: 100px;
+    
+}
+
+.site_name{
+    font-family: Roboto, sans-serif;
+    padding-top: 40px;
+}
+
+.page_test{
+    font-family: Roboto, sans-serif;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+ul#menu li a{
+    font-family: Roboto, sans-serif;
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 16px;
+    text-align: center;
+    color: #000;
+    border-radius: 10px;
+    background-color: #44D17D;
+    text-decoration: none;
+}
+
+ul#menu li{
+    font-family: Roboto, sans-serif;
+    display:inline-block; /* расположить пункты горизонтально */
+}
+
+.main_text_p{
+    margin-top: 40px;
+    font-family: Roboto, sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.main_button{
+    margin-top: 200px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.main_button_2{
+    margin-top: 170px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.main_button_3{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.checkbox{
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.buttons{
+    /*width: 445px;*/
+    height: 78px;
+    font-family: Roboto, sans-serif;
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 33px;
+    text-align: center;
+    color: #000;
+    border-radius: 10px;
+    background-color: #44D17D;
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+
+#buttons{
+    height: 78px;
+    font-family: Roboto, sans-serif;
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 33px;
+    text-align: center;
+    color: #000;
+    border-radius: 10px;
+    background-color: #44D17D;
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+
+.footer{
+    height: 23px;
+    background-color: #000;
+}
+
+.footer_p{
+    font-family: Roboto, sans-serif;
+    color: #fff;
+    margin-left: 20px;
+}

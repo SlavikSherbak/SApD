@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}S.A.p.D.{% endblock %}
+
+{% block header %}
+<header>
+    <div class="row">
+        <div class="col-xxl-3 col-xl-2 col-lg-2 col-md-1 col-xs-1"></div>
+        <div class="col-xxl-2 col-xl-3 col-lg-3 col-md-3 col-xs-4 img_logo">
+            <img class="logo" src="{% static 'login/logo.png' %}" alt="My image">
+        </div>
+        <div class="col-xxl-5 col-xl-5 col-lg-4 col-md-7 col-xs-6">
+            <div  class="site_name">
+                <h1>Wellcom to S.A.p.D.</h1>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-1 col-xs-1"></div>
+    </div>
+</header>
+{% endblock %}
+{% block main %}
+<div  class="main">
+<div>
+    <div class="main_text row">
+        <div class="col-xxl-3 col-xl-2 col-lg-2 col-md-1"></div>
+        <div class="col-xxl-6 col-xl-8 col-lg-8 col-md-10">
+            <div class="page_test">
+                <ul id="menu">
+                    <li><a href="/">main</a></li>
+                </ul> 
+            </div>
+            <div class="main_text">
+                {% if useragreement %}
+
+                {% for a in useragreement %}
+                <p>{{a.useragreement_text}}</p>
+                {% endfor %} 
+                {% endif %} 
+            </div>
+        </div>
+        <div class="col-xxl-3 col-xl-2 col-lg-2 col-md-1"></div>
+    </div>
+    <div class="button">        
+        <div class="row">
+            <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-xs-5"></div>
+            <div class="main_button">
+                <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-xs-2">
+                    <div class="checkbox">
+                        <input id="form" required="" type="checkbox">
+                        <label for="form">Agree</label>
+                    </div>
+                    
+                    <form action="login_key">
+                        <input class="btn" id="buttons" type="submit" value="Continue" disabled=""/>
+                    </form>
+                </div>
+            </div>           
+            <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-xs-5"></div>
+        </div>
+        </div>
+    </div>
+</div>
+</div>
+<script src="{% static 'login/script.js' %}"></script>
+{% endblock %}
+{% block footer %}
+    <footer>
+        <div class="footer">
+            <p class="footer_p">Copyright 2022, all rights reserved </p>
+        </div>
+    </footer>
+{% endblock %}
