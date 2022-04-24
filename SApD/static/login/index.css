@@ -77,6 +77,11 @@ ul#menu li{
     justify-content: center;
 }
 
+.main_button_2{
+    display: flex;
+    justify-content: center;
+}
+
 .main_button_3{
     margin-top: 20px;
     display: flex;

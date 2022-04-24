@@ -32,17 +32,23 @@
                 <div class="main_text_p">
                     <h4>Please choose the method to get the login key</h4>
                 </div>
+                <form action="login" method="post">
+                    {% csrf_token %}
+                    <label for="your_name">Your name: </label>
+                    <input id="your_name" type="text" name="your_name" value="{{ current_name }}">
+                    <input type="submit" value="OK">
+                </form>
             </div>
             <div class="col-xxl-3 col-xl-2 col-lg-2 col-md-1"></div>
         </div>
         <div class="row">
             <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-1 col-xs-1"></div>
-            <div class="login_key_chose">
+            <div class="main_button">
                 <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-5 col-xs-5 main_button_2">
-                    <input class="buttons" type="button" value="Login">
+                    <input type="image" id="image" alt="gmail" src="{% static 'login/gmail.png' %}">
                 </div>
                 <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-5 col-xs-5 main_button_2">
-                    <input class="buttons" type="button" value="Create account">
+                    <input type="image" id="image" alt="telegram" src="{% static 'login/telegram.png' %}">
                 </div>
             </div>
             <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-1 col-xs-1"></div>
