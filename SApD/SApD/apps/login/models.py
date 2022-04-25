@@ -10,3 +10,13 @@ class Useragreement(models.Model):
     class Meta:
         verbose_name = 'Соглашение'
         verbose_name_plural = 'Соглашения'
+
+class User_mail(models.Model):
+    user_mail = models.CharField('Почта пользователя', max_length = 200)
+
+    def __str__(self):
+        return self.user_mail
+    
+    class Meta:
+        verbose_name = 'Почта пользователя'
+        verbose_name_plural = 'Почты пользователей'
