@@ -11,11 +11,29 @@
 </head>
 <body>
     <div class="wrapper">
-        {% block header %}{% endblock %}
+        <header>
+            <div class="row">
+                <div class="col-xxl-3 col-xl-2 col-lg-2 col-md-1 col-xs-1"></div>
+                <div class="col-xxl-2 col-xl-3 col-lg-3 col-md-3 col-xs-4 img_logo">
+                    <img class="logo" src="{% static 'login/logo.png' %}" alt="My image">
+                </div>
+                <div class="col-xxl-5 col-xl-5 col-lg-4 col-md-7 col-xs-6">
+                    <div  class="site_name">
+                        <h1>{% block header %}{% endblock %}</h1>
+                    </div>
+                </div>
+                <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-1 col-xs-1"></div>
+            </div>
+        </header>
+        
     
         {% block main %}{% endblock %}
     
-        {% block footer %}{% endblock %}
+        <footer>
+            <div class="footer">
+                <p class="footer_p">Copyright 2022, all rights reserved </p>
+            </div>
+        </footer>
     </div>
 </body>
 </html>

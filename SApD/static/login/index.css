@@ -19,7 +19,6 @@ html,body{
 }
 
 .logo{
-    margin: 20px;
     width: 112px;
     height: 100px;
     
@@ -70,17 +69,18 @@ ul#menu li{
     justify-content: center;
 }
 
-.main_button_2{
-    margin-top: 170px;
-    margin-left: 20px;
+.main_button13{
+    margin-bottom: 40px;
     display: flex;
     justify-content: center;
 }
 
 .main_button_2{
+    margin-top: 170px;
+    margin-left: 20px;
     display: flex;
     justify-content: center;
-}
+}   
 
 .main_button_3{
     margin-top: 20px;
