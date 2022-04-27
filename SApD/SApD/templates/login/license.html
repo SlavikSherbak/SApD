@@ -17,12 +17,7 @@
                 </ul> 
             </div>
             <div class="main_text">
-                {% if useragreement %}
-
-                {% for a in useragreement %}
-                <p>{{a.useragreement_text}}</p>
-                {% endfor %} 
-                {% endif %} 
+                <p>{{useragreement.useragreement_text}}</p>
             </div>
         </div>
         <div class="col-xxl-3 col-xl-2 col-lg-2 col-md-1"></div>

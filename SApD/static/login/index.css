@@ -62,14 +62,14 @@ ul#menu li{
     justify-content: center;
 }
 
-.main_button{
-    margin-top: 200px;
-    margin-bottom: 40px;
+.logo_button{
+    padding-top: 20px;
     display: flex;
     justify-content: center;
 }
 
-.main_button13{
+.main_button{
+    margin-top: 200px;
     margin-bottom: 40px;
     display: flex;
     justify-content: center;
@@ -82,7 +82,7 @@ ul#menu li{
     justify-content: center;
 }   
 
-.main_button_3{
+.main_button{
     margin-top: 20px;
     display: flex;
     justify-content: center;
