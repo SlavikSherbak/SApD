@@ -26,12 +26,12 @@ Login
             <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-1 col-xs-1"></div>
             <div class="main_button">
                 <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-5 col-xs-5 main_button_2">
-                    <form action="login">
+                    <form action="{% url 'login:main' %}">
                         <input class="buttons" type="button" value="Login">
                     </form>
                 </div>
                 <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-5 col-xs-5 main_button_2">
-                    <form action="license">
+                    <form action="{% url 'login:main' %}">
                         <input class="buttons" type="submit" value="Create account">
                     </form>
                 </div>

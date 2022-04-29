@@ -25,25 +25,33 @@ Login Key
         <div class="row">
             <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-1 col-xs-1"></div>
             <div class="logo_button">
-                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-5 col-xs-5 main_button">
-                    <input type="image" id="image" alt="gmail" src="{% static 'login/gmail.png' %}">
+                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-5 col-xs-5">
+                    <div class="input_license">
+                        <img id="image" alt="gmail" src="{% static 'login/gmail.png' %}">
+                    </div>
+                    <div class="input_license">
+                        <form action="{% url 'login:email_login' %}" method="POST">
+                            {% csrf_token %}
+                            <input type="text" class="input_license" required placeholder="Ваша почта" name="user_mail"><br>
+                            <input type="text" class="input_license" required placeholder="Ваша почта" name="mail_sender" value="sapdloginkey@gmail.com"><br>
+                            <button class="buttons input_license" type="submit"> Отправить </button>
+        
+                        </form>
+                    </div>
                 </div>
-                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-5 col-xs-5 main_button">
-                    <input type="image" id="image" alt="telegram" src="{% static 'login/telegram.png' %}">
+                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-5 col-xs-5">
+                    <div class="input_license">
+                        <img id="image" alt="telegram" src="{% static 'login/telegram.png' %}">
+                    </div>
+                    <div class="input_license">
+                        <form action="{% url 'login:telegram_login' %}" method="POST">
+                            {% csrf_token %}
+                            <input type="text" class="input_license" required placeholder="Ваш телеграм" name="user_telegram"><br>
+                            <button class="buttons input_license" type="submit"> Отправить </button>
+        
+                        </form>
+                    </div>
                 </div>
-            </div>
-            <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-1 col-xs-1"></div>
-        </div>
-        <div class="row">
-            <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-1 col-xs-1"></div>
-            <div class="main_button">
-                <form action="user_mail" method="POST">
-                    {% csrf_token %}
-                    <input type="text" required placeholder="Ваша почта" name="name"><br>
-                    <input type="text" required placeholder="Ваша почта" name="mail_sender" value="sapdloginkey@gmail.com"><br>
-                    <button class="buttons" type="submit"> Отправить </button>
-
-                </form>
             </div>
             <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-1 col-xs-1"></div>
         </div>

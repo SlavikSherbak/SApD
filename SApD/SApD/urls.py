@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
+    path('messenger/', include('messenger.urls')),
     path('grappelli/', include('grappelli.urls')), # grappelli URLS
     path('', include('login.urls')),
     path('admin/', admin.site.urls),  

@@ -69,7 +69,7 @@ ul#menu li{
 }
 
 .main_button{
-    margin-top: 200px;
+    margin-top: 20px;
     margin-bottom: 40px;
     display: flex;
     justify-content: center;
@@ -82,11 +82,11 @@ ul#menu li{
     justify-content: center;
 }   
 
-.main_button{
-    margin-top: 20px;
+.input_license{
+    margin-top: 10px;
     display: flex;
     justify-content: center;
-}
+} 
 
 .checkbox{
     margin-left: 10px;

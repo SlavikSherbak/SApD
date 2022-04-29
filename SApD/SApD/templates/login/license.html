@@ -17,7 +17,12 @@
                 </ul> 
             </div>
             <div class="main_text">
-                <p>{{useragreement.useragreement_text}}</p>
+                {% if useragreement %}
+
+                {% for a in useragreement %}
+                  <p id="text" >{{a.useragreement_text}}</p>
+               {% endfor %} 
+               {% endif %}                  
             </div>
         </div>
         <div class="col-xxl-3 col-xl-2 col-lg-2 col-md-1"></div>
@@ -32,7 +37,7 @@
                         <label for="form">Agree</label>
                     </div>
                     
-                    <form action="login_key">
+                    <form action="{% url 'messenger:main' %}">
                         <input class="btn" id="buttons" type="submit" value="Continue" disabled=""/>
                     </form>
                 </div>
