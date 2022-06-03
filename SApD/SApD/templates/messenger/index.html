@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}S.A.p.D.{% endblock %}
+
+{% block header %}
+Wellcom to S.A.p.D.
+{% endblock %}
+{% block main %}
+    <div  class="main">
+    <div>
+        <div class="main_text row">
+            <div class="col-xxl-3 col-xl-2 col-lg-2 col-md-1"></div>
+            <div class="col-xxl-6 col-xl-8 col-lg-8 col-md-10">
+                <div class="main_text_p">
+                    <p>С подклчючением User_name<br><br>
+                        Рады что ты решил стать пользователем нашего <br>
+                        проекта. Если ты новичок то создай акаунт, если ты <br> уже зарегистрирован то воходи, мы рады что вы используете наш проект =)
+                    </p>
+                </div>
+            </div>
+            <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-1"></div>
+        </div>
+        <div class="row">
+            <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-10 col-xs-1"></div>
+            <div class="main_button">
+                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-5 col-xs-5 main_button_2">
+                    <form action="{% url 'login:main' %}">
+                        <input class="buttons" type="submit" value="login">
+                    </form>
+                </div>
+            </div>
+            <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-1 col-xs-1"></div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -7,37 +7,26 @@ Login
 {% endblock %}
 {% block main %}
     <div  class="main">
-    <div>
-        <div class="main_text row">
-            <div class="col-xxl-3 col-xl-2 col-lg-2 col-md-1"></div>
-            <div class="col-xxl-6 col-xl-8 col-lg-8 col-md-10">
-                <div class="page_test">
-                    <ul id="menu">
-                        <li><a href="/">main</a></li>
-                    </ul>
-                </div>
-                <div class="main_text_p">
-                    <h3>Enter bottom your access code вот так</h3>
-                </div>
-            </div>
-            <div class="col-xxl-3 col-xl-2 col-lg-2 col-md-1"></div>
-        </div>
+    <div class="container-lg">
         <div class="row">
-            <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-1 col-xs-1"></div>
-            <div class="main_button">
-                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-5 col-xs-5 main_button_2">
-                    <form action="{% url 'login:main' %}">
-                        <input class="buttons" type="button" value="Login">
-                    </form>
-                </div>
-                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-5 col-xs-5 main_button_2">
-                    <form action="{% url 'login:main' %}">
-                        <input class="buttons" type="submit" value="Create account">
-                    </form>
-                </div>
-            </div>
-            <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-1 col-xs-1"></div>
+          <div class="col-md-12">
+            <span class="main_text"><h3>Введите код доступа ниже</h3></span>
+          </div>
         </div>
     </div>
-</div>
+        <div class="row">
+            <div class="buttons">
+              <form role="form" class="form-horizontal" action="{% url 'login:telegram_login' %}" method="POST">
+                  {% csrf_token %}
+                  <div class="form-group">
+                    <label for="code" class="control-label">Ваш код</label>
+                    <input type="text" class="form-control" id="code" required placeholder="AD1RGT" name="user_code_access">
+                    <div id="emailHelp" class="form-text">Не забывайте что код обновляеться каждые 2 часа</div>
+                    <span class="main_text"><button type="submit" class="btn btn-success" id="buttons">Войти</button></span>
+                  </div>
+              </form>
+            </div>
+        </div>
+    </div>
+
 {% endblock %}

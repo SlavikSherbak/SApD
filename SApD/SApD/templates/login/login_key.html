@@ -6,55 +6,53 @@
 Login Key
 {% endblock %}
 {% block main %}
-    <div  class="main">
-    <div>
-        <div class="main_text row">
-            <div class="col-xxl-3 col-xl-2 col-lg-2 col-md-1"></div>
-            <div class="col-xxl-6 col-xl-8 col-lg-8 col-md-10">
-                <div class="page_test">
-                    <ul id="menu">
-                        <li><a href="/">main</a></li>
-                    </ul> 
+<div class="main">
+  <div class="container-lg">
+  <ul class="nav nav-pills justify-content-center" id="pills-tab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="pills-gmail-tab" data-bs-toggle="pill" data-bs-target="#pills-gmail" type="button" role="tab" aria-controls="pills-gmail" aria-selected="true">
+        <img id="image" alt="gmail" src="{% static 'login/gmail.png' %}">
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="pills-telegram-tab" data-bs-toggle="pill" data-bs-target="#pills-telegram" type="button" role="tab" aria-controls="pills-telegram" aria-selected="false">
+        <img id="image" alt="telegram" src="{% static 'login/telegram.png' %}">
+      </button>
+    </li>
+  </ul>
+  <div class="tab-content" id="pills-tabContent">
+    <div class="tab-pane fade show active" id="pills-gmail" role="tabpanel" aria-labelledby="pills-gmail-tab" tabindex="0">
+      <div class="container">
+        <div class="input_license">
+            <form action="{% url 'login:email_login' %}" method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                  <label for="email" class="control-label">Ваш email</label>
+                  <input type="email" class="form-control" id="email" required placeholder="Ваша почта" name="user_mail"><br>
+                  <label for="email_sender" class="control-label">Email с которого будет приходить код</label>
+                  <input type="email" class="form-control" id="email_sender"required placeholder="Почта отправителя кода" name="mail_sender" value="sapdloginkey@gmail.com"><br>
+                  <span class="input_license"><button type="submit" class="btn btn-success" id="buttons">Отправить</button></span>
                 </div>
-                <div class="main_text_p">
-                    <h4>Please choose the method to get the login key</h4>
-                </div>
-            </div>
-            <div class="col-xxl-3 col-xl-2 col-lg-2 col-md-1"></div>
+            </form>
         </div>
-        <div class="row">
-            <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-1 col-xs-1"></div>
-            <div class="logo_button">
-                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-5 col-xs-5">
-                    <div class="input_license">
-                        <img id="image" alt="gmail" src="{% static 'login/gmail.png' %}">
-                    </div>
-                    <div class="input_license">
-                        <form action="{% url 'login:email_login' %}" method="POST">
-                            {% csrf_token %}
-                            <input type="text" class="input_license" required placeholder="Ваша почта" name="user_mail"><br>
-                            <input type="text" class="input_license" required placeholder="Ваша почта" name="mail_sender" value="sapdloginkey@gmail.com"><br>
-                            <button class="buttons input_license" type="submit"> Отправить </button>
-        
-                        </form>
-                    </div>
-                </div>
-                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-5 col-xs-5">
-                    <div class="input_license">
-                        <img id="image" alt="telegram" src="{% static 'login/telegram.png' %}">
-                    </div>
-                    <div class="input_license">
-                        <form action="{% url 'login:telegram_login' %}" method="POST">
-                            {% csrf_token %}
-                            <input type="text" class="input_license" required placeholder="Ваш телеграм" name="user_telegram"><br>
-                            <button class="buttons input_license" type="submit"> Отправить </button>
-        
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-1 col-xs-1"></div>
-        </div>
+      </div>
     </div>
+    <div class="tab-pane fade" id="pills-telegram" role="tabpanel" aria-labelledby="pills-telegram-tab" tabindex="0">
+      <div class="container">
+        <div class="input_license">
+            <form action="{% url 'login:telegram_login' %}" method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                  <label for="telegram" class="control-label">Ваш telegrm id</label>
+                  <input type="text" class="form-control" id="telegram" required placeholder="@user_2077" name="user_telegram">
+                  <div id="emailHelp" class="form-text">Telegram id должен начинаться с символа @.<br> К примеру @v.pupkin</div>
+                  <span class="input_license"><button type="submit" class="btn btn-success" id="buttons">Отправить</button></span>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 </div>
 {% endblock %}

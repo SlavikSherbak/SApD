@@ -31,6 +31,8 @@ html,body{
 .site_name{
     font-family: Roboto, sans-serif;
     padding-top: 40px;
+    display: flex;
+    justify-content: center;
 }
 
 .page_test{
@@ -54,6 +56,29 @@ ul#menu li a{
     text-decoration: none;
 }
 
+.nav-pills{
+  padding-top: 40px;
+}
+
+.nav-pills .nav-item .nav-link.active {
+  background-color: #44D17D;
+  font-family: Roboto, sans-serif;
+  border: 0;
+  line-height: 2.5;
+  padding: 0 20px;
+  font-size: 33px;
+  text-align: center;
+  color: #000;
+  border-radius: 10px;
+  background-color: #44D17D;
+  box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+              inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+
+.tab-content{
+  margin-bottom: 30px;
+}
+
 ul#menu li{
     font-family: Roboto, sans-serif;
     display:inline-block; /* расположить пункты горизонтально */
@@ -66,6 +91,14 @@ ul#menu li{
     justify-content: center;
 }
 
+.main_text{
+  margin-bottom: 30px;
+    margin-top: 80px;
+    font-family: Roboto, sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
 .logo_button{
     padding-top: 20px;
     display: flex;
@@ -73,10 +106,15 @@ ul#menu li{
 }
 
 .main_button{
-    margin-top: 20px;
-    margin-bottom: 40px;
-    display: flex;
-    justify-content: center;
+    margin-top: 120px;
+    margin-bottom: 20px;
+}
+
+.buttons{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .main_button_2{

@@ -7,10 +7,9 @@ Wellcom to S.A.p.D.
 {% endblock %}
 {% block main %}
     <div  class="main">
-    <div>
-        <div class="main_text row">
-            <div class="col-xxl-3 col-xl-2 col-lg-2 col-md-1"></div>
-            <div class="col-xxl-6 col-xl-8 col-lg-8 col-md-10">
+    <div class="container-lg">
+        <div class="row">
+            <div class="col-md-12">
                 <div class="main_text_p">
                     <p>С подклчючением User_name<br><br>
                         Рады что ты решил стать пользователем нашего <br>
@@ -18,23 +17,31 @@ Wellcom to S.A.p.D.
                     </p>
                 </div>
             </div>
-            <div class="col-xxl-3 col-xl-2 col-lg-2 col-md-1"></div>
         </div>
-        <div class="row">
-            <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-1 col-xs-1"></div>
-            <div class="main_button">
-                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-5 col-xs-5 main_button_2">
-                    <form action="{% url 'login:login' %}">
-                        <input class="buttons" type="submit" value="Login">
-                    </form>
+        <div class="container-lg">
+          <div class="main_button">
+            <div class="row">
+                <div class="col-xl-3 col-lg-1 "></div>
+                <div class="col-xl-3 col-lg-5 col-md-5 col-sm-5 col-12">
+                  <div class="buttons">
+                    <span>
+                      <form class="container" action="{% url 'login:login' %}">
+                          <input type="submit" class="btn btn-success" id="buttons" value="Login">
+                      </form>
+                    </span>
+                  </div>
                 </div>
-                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-5 col-xs-5 main_button_2">
-                    <form action="{% url 'login:login_key' %}">
-                        <input class="buttons" type="submit" value="Create account">
-                    </form>
+                <div class="col-xl-3 col-lg-5 col-md-5 col-sm-7 col-12">
+                  <div class="buttons">
+                    <span>
+                      <form class="container" action="{% url 'login:instruction' %}">
+                          <input type="submit" class="btn btn-success bat"  id="buttons" value="Create account">
+                      </form>
+                    </span>
+                  </div>
                 </div>
             </div>
-            <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-1 col-xs-1"></div>
+            </div>
         </div>
     </div>
 </div>

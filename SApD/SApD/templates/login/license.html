@@ -7,46 +7,35 @@
 {% endblock %}
 {% block main %}
 <div  class="main">
-<div>
-    <div class="main_text row">
-        <div class="col-xxl-3 col-xl-2 col-lg-2 col-md-1"></div>
-        <div class="col-xxl-6 col-xl-8 col-lg-8 col-md-10">
-            <div class="page_test">
-                <ul id="menu">
-                    <li><a href="/">main</a></li>
-                </ul> 
-            </div>
-            <div class="main_text">
+  <div class="container-lg">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="main_text_p">
                 {% if useragreement %}
 
                 {% for a in useragreement %}
                   <p id="text" >{{a.useragreement_text}}</p>
-               {% endfor %} 
-               {% endif %}                  
+               {% endfor %}
+               {% endif %}
             </div>
         </div>
-        <div class="col-xxl-3 col-xl-2 col-lg-2 col-md-1"></div>
     </div>
-    <div class="button">        
-        <div class="row">
-            <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-xs-5"></div>
-            <div class="main_button">
-                <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-xs-2">
+  </div>
+    <div class="container-lg">
+        <div class="buttons">
+            <div class="row">
+                <div class="col-md-12">
                     <div class="checkbox">
                         <input id="form" required="" type="checkbox">
                         <label for="form">Agree</label>
                     </div>
-                    
-                    <form action="{% url 'messenger:main' %}">
+                    <form action="{% url 'login:login' %}">
                         <input class="btn" id="buttons" type="submit" value="Continue" disabled=""/>
                     </form>
                 </div>
-            </div>           
-            <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-xs-5"></div>
+            </div>
         </div>
         </div>
-    </div>
-</div>
-</div>
 <script src="{% static 'login/script.js' %}"></script>
+</div>
 {% endblock %}

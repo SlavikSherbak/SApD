@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}S.A.p.D.{% endblock %}
+
+{% block header %}
+Instruction
+{% endblock %}
+{% block main %}
+<div  class="main">
+<div class="container-lg">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="main_text_p">
+                <p>С подклчючением User_name<br><br>
+                    Добро пожаловать в семю. На этой странице ты узнаеш полную инструкцию по експлуатации нашего проекта
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container-lg">
+      <div class="main_button">
+        <div class="row">
+            <div class="col-md-12">
+              <div class="buttons">
+                <span>
+                  <form class="container" action="{% url 'login:login_key' %}">
+                      <input type="submit" class="btn btn-success bat"  id="buttons" value="Продолжить">
+                  </form>
+                </span>
+              </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+</div>
+
+{% endblock %}
