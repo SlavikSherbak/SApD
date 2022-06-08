@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,300&display=swap');
 
-html,body{
+html, body{
     height: 100%;
     overflow-x:  hidden;
     font-family: Roboto, sans-serif;
@@ -123,7 +123,6 @@ ul#menu li{
 }
 
 .input_license{
-    margin-top: 10px;
     display: flex;
     justify-content: center;
 }
